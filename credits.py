@@ -35,9 +35,6 @@ def main(argv):
         elif opt in ("-o", "--out"):
             outputfile = arg
 
-    print outputfile
-    print inputdir
-
     if(outputfile == None or inputdir == None):
         printHelp(2)
 
