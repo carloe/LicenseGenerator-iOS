@@ -71,7 +71,7 @@ def plistFromDir(dir):
 def plistFromFile(path):
     """
     Returns a plist representation of the file at 'path'. Uses the name of the
-    paremt folder for the title property.
+    parent folder for the title property.
     """
     base_group = {'Type': 'PSGroupSpecifier', 'FooterText': '', 'Title': ''}
     current_file = open(path, 'r')
