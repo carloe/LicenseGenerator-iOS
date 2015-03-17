@@ -20,6 +20,8 @@ import codecs
 import getopt
 from copy import deepcopy
 
+EXCLUDE = []
+
 def main(argv):
     outputfile = None
     inputdir = None
@@ -64,14 +66,16 @@ def plistFromDir(dir):
     for root, dirs, files in os.walk(dir):
         for file in files:
             if file.startswith("LICENSE"):
-                license = plistFromFile(os.path.join(root, file))
-                plist['PreferenceSpecifiers'].append(license)
+                plistPath = os.path.join(root, file)
+                if not excludePath(plistPath):
+                    license = plistFromFile(plistPath)
+                    plist['PreferenceSpecifiers'].append(license)
     return plist
 
 def plistFromFile(path):
     """
     Returns a plist representation of the file at 'path'. Uses the name of the
-    parent folder for the title property.
+    paremt folder for the title property.
     """
     base_group = {'Type': 'PSGroupSpecifier', 'FooterText': '', 'Title': ''}
     current_file = open(path, 'r')
@@ -85,7 +89,13 @@ def plistFromFile(path):
     body = unicode(body, 'utf-8')
     group['FooterText'] = rchop(body, " \n\n")
     return group
-
+    
+def excludePath(path):
+    for pattern in EXCLUDE:
+        if(re.search(pattern, path, re.S) != None):
+            return True
+    return False
+    
 def rchop(str, ending):
     if str.endswith(ending):
         return str[:-len(ending)]
