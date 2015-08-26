@@ -12,7 +12,7 @@ Inspired by JosephH and Sean's comments on [stackoverflow](http://stackoverflow.
 * Copy `credits.py` to the your project root
 * Open your project, select your **Target** and select **Build Phases**
 * Add a new **Run Script Phase** after target dependencies
-* Add something like: `./credits.py -s $SRCROOT -o $SRCROOT/MyProj/Settings.bundle/Credits.plist`
+* Add something like: `./credits.py -s "$SRCROOT" -o "$SRCROOT/MyProj/Settings.bundle/Credits.plist"`
 * Build & profit
 
 ##Excluding Directories
