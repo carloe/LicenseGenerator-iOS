@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B5C4C7F1CB12C70003CA077 /* Credits.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C4C7E1CB12C70003CA077 /* Credits.plist */; };
+		2B8B01A61CB12B6600F03947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B01A51CB12B6600F03947 /* AppDelegate.swift */; };
+		2B8B01AB1CB12B6600F03947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B01A91CB12B6600F03947 /* Main.storyboard */; };
+		2B8B01AD1CB12B6600F03947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B01AC1CB12B6600F03947 /* Assets.xcassets */; };
+		2B8B01B01CB12B6600F03947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B01AE1CB12B6600F03947 /* LaunchScreen.storyboard */; };
+		2BF95C661CB1325D00429D0B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95C651CB1325D00429D0B /* TableViewController.swift */; };
+		F469521610C1E8BAF5D87B12 /* Pods_LicensesViewControllerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BF95C631CB1303B00429D0B /* Embed Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B5C4C7E1CB12C70003CA077 /* Credits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credits.plist; sourceTree = "<group>"; };
+		2B8B01A21CB12B6600F03947 /* LicensesViewControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LicensesViewControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8B01A51CB12B6600F03947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B8B01AA1CB12B6600F03947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B8B01AC1CB12B6600F03947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8B01AF1CB12B6600F03947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B8B01B11CB12B6600F03947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF95C651CB1325D00429D0B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		6944C8D8A792F3D01DC2A226 /* Pods-LicensesViewControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LicensesViewControllerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LicensesViewControllerExample/Pods-LicensesViewControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CA5191F110E4BEC5AD5F5E98 /* Pods-LicensesViewControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LicensesViewControllerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LicensesViewControllerExample/Pods-LicensesViewControllerExample.release.xcconfig"; sourceTree = "<group>"; };
+		EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LicensesViewControllerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B8B019F1CB12B6600F03947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F469521610C1E8BAF5D87B12 /* Pods_LicensesViewControllerExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		242CDB33F69894DAB0DC971B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B8B01991CB12B6600F03947 = {
+			isa = PBXGroup;
+			children = (
+				2B8B01A41CB12B6600F03947 /* LicenseViewControllerExample */,
+				2B8B01A31CB12B6600F03947 /* Products */,
+				666953EA101A877B50C94182 /* Pods */,
+				242CDB33F69894DAB0DC971B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B8B01A31CB12B6600F03947 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B01A21CB12B6600F03947 /* LicensesViewControllerExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B8B01A41CB12B6600F03947 /* LicenseViewControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B01A51CB12B6600F03947 /* AppDelegate.swift */,
+				2BF95C651CB1325D00429D0B /* TableViewController.swift */,
+				2B8B01A91CB12B6600F03947 /* Main.storyboard */,
+				2B8B01AC1CB12B6600F03947 /* Assets.xcassets */,
+				2B8B01AE1CB12B6600F03947 /* LaunchScreen.storyboard */,
+				2B8B01B11CB12B6600F03947 /* Info.plist */,
+				2B5C4C7E1CB12C70003CA077 /* Credits.plist */,
+			);
+			name = LicenseViewControllerExample;
+			path = LicensesViewControllerExample;
+			sourceTree = "<group>";
+		};
+		666953EA101A877B50C94182 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6944C8D8A792F3D01DC2A226 /* Pods-LicensesViewControllerExample.debug.xcconfig */,
+				CA5191F110E4BEC5AD5F5E98 /* Pods-LicensesViewControllerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B8B01A11CB12B6600F03947 /* LicensesViewControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8B01B41CB12B6600F03947 /* Build configuration list for PBXNativeTarget "LicensesViewControllerExample" */;
+			buildPhases = (
+				65BAF183D333E2E8606F96C7 /* 📦 Check Pods Manifest.lock */,
+				2B8B019E1CB12B6600F03947 /* Sources */,
+				2B8B019F1CB12B6600F03947 /* Frameworks */,
+				2B5C4C7B1CB12BE0003CA077 /* Generate Licenses Plist */,
+				2B8B01A01CB12B6600F03947 /* Resources */,
+				2BF95C631CB1303B00429D0B /* Embed Framework */,
+				7B4799681485A521CA3C59A2 /* 📦 Embed Pods Frameworks */,
+				3BCA5F18F5E0CBED1A3C6CBE /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LicensesViewControllerExample;
+			productName = LicenseViewControllerExample;
+			productReference = 2B8B01A21CB12B6600F03947 /* LicensesViewControllerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B8B019A1CB12B6600F03947 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = relaunch;
+				TargetAttributes = {
+					2B8B01A11CB12B6600F03947 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 2B8B019D1CB12B6600F03947 /* Build configuration list for PBXProject "LicensesViewControllerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B8B01991CB12B6600F03947;
+			productRefGroup = 2B8B01A31CB12B6600F03947 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B8B01A11CB12B6600F03947 /* LicensesViewControllerExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B8B01A01CB12B6600F03947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8B01B01CB12B6600F03947 /* LaunchScreen.storyboard in Resources */,
+				2B5C4C7F1CB12C70003CA077 /* Credits.plist in Resources */,
+				2B8B01AD1CB12B6600F03947 /* Assets.xcassets in Resources */,
+				2B8B01AB1CB12B6600F03947 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B5C4C7B1CB12BE0003CA077 /* Generate Licenses Plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Licenses Plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../credits.py -s \"$SRCROOT/Licenses\" -o \"$SRCROOT/LicensesViewControllerExample/Credits.plist\"";
+		};
+		3BCA5F18F5E0CBED1A3C6CBE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LicensesViewControllerExample/Pods-LicensesViewControllerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65BAF183D333E2E8606F96C7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B4799681485A521CA3C59A2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LicensesViewControllerExample/Pods-LicensesViewControllerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B8B019E1CB12B6600F03947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8B01A61CB12B6600F03947 /* AppDelegate.swift in Sources */,
+				2BF95C661CB1325D00429D0B /* TableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B8B01A91CB12B6600F03947 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8B01AA1CB12B6600F03947 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B8B01AE1CB12B6600F03947 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8B01AF1CB12B6600F03947 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B8B01B21CB12B6600F03947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B8B01B31CB12B6600F03947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B8B01B51CB12B6600F03947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6944C8D8A792F3D01DC2A226 /* Pods-LicensesViewControllerExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LicensesViewControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relaunch.LicensesViewControllerExample;
+				PRODUCT_NAME = LicensesViewControllerExample;
+			};
+			name = Debug;
+		};
+		2B8B01B61CB12B6600F03947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5191F110E4BEC5AD5F5E98 /* Pods-LicensesViewControllerExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LicensesViewControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.relaunch.LicensesViewControllerExample;
+				PRODUCT_NAME = LicensesViewControllerExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B8B019D1CB12B6600F03947 /* Build configuration list for PBXProject "LicensesViewControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8B01B21CB12B6600F03947 /* Debug */,
+				2B8B01B31CB12B6600F03947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8B01B41CB12B6600F03947 /* Build configuration list for PBXNativeTarget "LicensesViewControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8B01B51CB12B6600F03947 /* Debug */,
+				2B8B01B61CB12B6600F03947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B8B019A1CB12B6600F03947 /* Project object */;
+}
