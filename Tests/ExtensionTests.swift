@@ -23,8 +23,8 @@ class PlistTests: XCTestCase {
     let dictionary = NSBundle(forClass: self.dynamicType).loadPlist("Credits")
     XCTAssert((dictionary as Any) is NSDictionary)
     XCTAssert(dictionary!.allKeys.count == 2)
-    XCTAssertEqual(dictionary!.allKeys[0] as? String, "StringsTable")
-    XCTAssertEqual(dictionary!.allKeys[1] as? String, "PreferenceSpecifiers")
+    XCTAssertNotNil(dictionary!["StringsTable"])
+    XCTAssertNotNil(dictionary!["PreferenceSpecifiers"])
   }
   
   func testLoadingNonexistentPlists() {
