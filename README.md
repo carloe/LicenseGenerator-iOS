@@ -1,4 +1,7 @@
 #LicenseGenerator iOS
+
+[![Build Status](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
+
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
 
 ![](screenshot.png)
