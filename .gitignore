@@ -79,3 +79,42 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### Swift ###
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Project Generated Files
+Tests/Resources/Credits.plist
+Example/LicensesViewControllerExample/Credits.plist
+Example/LicensesViewControllerExample.xcworkspace/
+Example/Podfile.lock
+Example/Pods
