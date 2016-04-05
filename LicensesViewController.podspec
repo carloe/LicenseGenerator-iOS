@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = "https://github.com/carloe/LicenseGenerator-iOS"
-  s.screenshot       = "https://raw.githubusercontent.com/carloe/LicenseGenerator-iOS/master/screenshot.jpg"
+  s.screenshot       = "https://raw.githubusercontent.com/carloe/LicenseGenerator-iOS/master/screenshot.png"
   s.license          = 'MIT'
   s.author           = { "Carlo Eugster" => "carlo@relaun.ch" }
   s.source           = { :git => "https://github.com/carloe/LicenseGenerator-iOS.git", :tag => s.version.to_s }
