@@ -11,10 +11,10 @@ import LicensesViewController
 
 class TableViewController: UITableViewController {
   
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "AknowledgementSegue" {
-      if let destinationVC = segue.destinationViewController as? LicensesViewController {
-        destinationVC.loadPlist(NSBundle.mainBundle(), resourceName: "Credits")
+      if let destinationVC = segue.destination as? LicensesViewController {
+        destinationVC.loadPlist(Bundle.main, resourceName: "Credits")
       }
     }
   }

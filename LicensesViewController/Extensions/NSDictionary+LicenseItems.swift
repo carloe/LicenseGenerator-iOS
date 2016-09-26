@@ -16,7 +16,7 @@ extension NSDictionary {
     var resultArray = Array<LicenseItem>()
     if let licensesDicts = self["PreferenceSpecifiers"] as? NSArray {
       for license in (licensesDicts as NSArray as! [NSDictionary]) {
-        if let title = license["Title"] as? String, body = license["FooterText"] as? String {
+        if let title = license["Title"] as? String, let body = license["FooterText"] as? String {
           let model = LicenseItem(title: title, body: body)
           resultArray.append(model)
         }
