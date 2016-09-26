@@ -11,25 +11,25 @@ import UIKit
 // MARK: - LicensesViewController
 
 /// ViewController that displays Settings.bundle style credist.
-public class LicensesViewController : UIViewController {
+open class LicensesViewController : UIViewController {
   
   /// The tableView
-  let tableView = UITableView(frame: CGRect.zero, style: .Grouped)
+  let tableView = UITableView(frame: CGRect.zero, style: .grouped)
   
   /// The tableView's UITableViewDataSource.
   var dataSource: LicensesDataSource!
   
   /// Boolean tracking if the constrains have been setup.
-  private var didSetupConstraints = false
+  fileprivate var didSetupConstraints = false
   
-  private let reuseIdentifier = "LicenseCell"
+  fileprivate let reuseIdentifier = "LicenseCell"
   
-  public override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
     
     title = NSLocalizedString("Aknowledgements", comment: "Aknowledgements")
     
-    tableView.registerClass(LicenseCell.classForCoder(), forCellReuseIdentifier: reuseIdentifier)
+    tableView.register(LicenseCell.classForCoder(), forCellReuseIdentifier: reuseIdentifier)
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 68.0
     tableView.frame = view.bounds
@@ -37,17 +37,17 @@ public class LicensesViewController : UIViewController {
     view.addSubview(tableView)
   }
   
-  public override func updateViewConstraints() {
+  open override func updateViewConstraints() {
     if(!didSetupConstraints) {
       view.addConstraints(
-        NSLayoutConstraint.constraintsWithVisualFormat("H:|[tableView]|",
+        NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableView]|",
           options: NSLayoutFormatOptions(rawValue: 0),
           metrics: nil,
           views: ["tableView" : tableView]
         )
       )
       view.addConstraints(
-        NSLayoutConstraint.constraintsWithVisualFormat("V:|[tableView]|",
+        NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableView]|",
           options: NSLayoutFormatOptions(rawValue: 0),
           metrics: nil,
           views: ["tableView" : tableView]
@@ -65,7 +65,7 @@ public class LicensesViewController : UIViewController {
    - parameter bundle:       The bundle containing the plist
    - parameter resourceName: The resource name of the plist
    */
-  public func loadPlist(bundle: NSBundle, resourceName: String) {
+  open func loadPlist(_ bundle: Bundle, resourceName: String) {
     if let plistDict = bundle.loadPlist(resourceName) {
       loadPlist(plistDict)
     }
@@ -76,7 +76,7 @@ public class LicensesViewController : UIViewController {
    
    - parameter dictionary: A Settings.bundle style NSDictionary
    */
-  public func loadPlist(dictionary: NSDictionary) {
+  open func loadPlist(_ dictionary: NSDictionary) {
     let items = dictionary.toLicenseItems()
     setDataSource(items)
   }
@@ -84,7 +84,7 @@ public class LicensesViewController : UIViewController {
   /**
    Initializes the tableView's dataSource.
    */
-  func setDataSource(licenseItems: Array<LicenseItem>) {
+  func setDataSource(_ licenseItems: Array<LicenseItem>) {
     dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier, items: licenseItems, configureCell: {
       (cell: LicenseCell, item: LicenseItem) in
       cell.titleLabel.text = item.title
@@ -105,7 +105,7 @@ class LicenseCell : UITableViewCell {
   let bodyLabel = UILabel()
   
   /// Boolean tracking if the constrains have been setup.
-  private var didSetupConstraints = false
+  fileprivate var didSetupConstraints = false
   
   /**
    Initializes a new LicenseCell
@@ -120,19 +120,19 @@ class LicenseCell : UITableViewCell {
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
-    selectionStyle = .None
+    selectionStyle = .none
     
-    titleLabel.textColor = UIColor.blackColor()
+    titleLabel.textColor = UIColor.black
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-    titleLabel.lineBreakMode = .ByTruncatingTail
+    titleLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+    titleLabel.lineBreakMode = .byTruncatingTail
     titleLabel.numberOfLines = 1
     contentView.addSubview(titleLabel)
     
-    bodyLabel.textColor = UIColor.darkGrayColor()
+    bodyLabel.textColor = UIColor.darkGray
     bodyLabel.translatesAutoresizingMaskIntoConstraints = false
-    bodyLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
-    bodyLabel.lineBreakMode = .ByWordWrapping
+    bodyLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.footnote)
+    bodyLabel.lineBreakMode = .byWordWrapping
     bodyLabel.numberOfLines = 0
     contentView.addSubview(bodyLabel)
     
@@ -153,19 +153,19 @@ class LicenseCell : UITableViewCell {
       ]
       
       contentView.addConstraints(
-        NSLayoutConstraint.constraintsWithVisualFormat("H:|-[titleLabel]-|",
+        NSLayoutConstraint.constraints(withVisualFormat: "H:|-[titleLabel]-|",
           options: noLayoutOption,
           metrics: nil,
           views: views)
       )
       contentView.addConstraints(
-        NSLayoutConstraint.constraintsWithVisualFormat("H:|-[bodyLabel]-|",
+        NSLayoutConstraint.constraints(withVisualFormat: "H:|-[bodyLabel]-|",
           options: noLayoutOption,
           metrics: nil,
           views: views)
       )
       contentView.addConstraints(
-        NSLayoutConstraint.constraintsWithVisualFormat("V:|-[titleLabel]-[bodyLabel]-|",
+        NSLayoutConstraint.constraints(withVisualFormat: "V:|-[titleLabel]-[bodyLabel]-|",
           options: noLayoutOption,
           metrics: nil,
           views: views)
@@ -183,7 +183,7 @@ class LicenseCell : UITableViewCell {
 class LicensesDataSource: NSObject, UITableViewDataSource {
   
   /// A closure for configuring cells.
-  typealias LicenseCellConfigClosure = (cell: LicenseCell, item: LicenseItem) -> ()
+  typealias LicenseCellConfigClosure = (_ cell: LicenseCell, _ item: LicenseItem) -> ()
   
   /// Closure that is called to configure cells.
   let configureCell: LicenseCellConfigClosure!
@@ -203,25 +203,25 @@ class LicensesDataSource: NSObject, UITableViewDataSource {
    
    - returns: An initialized `dataSource` object.
    */
-  init(reuseIdentifier: String, items: Array<LicenseItem>, configureCell: LicenseCellConfigClosure) {
+  init(reuseIdentifier: String, items: Array<LicenseItem>, configureCell: @escaping LicenseCellConfigClosure) {
     self.configureCell = configureCell
     self.reuseIdentifier = reuseIdentifier
     self.items = items;
   }
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return items.count
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1
   }
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as? LicenseCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? LicenseCell
     
-    let item = items[indexPath.section]
-    configureCell(cell: cell!, item: item)
+    let item = items[(indexPath as NSIndexPath).section]
+    configureCell?(cell!, item)
     return cell!
   }
   
@@ -232,8 +232,8 @@ class LicensesDataSource: NSObject, UITableViewDataSource {
    
    - returns: The `LicenseItem` at the given `indexPath`.
    */
-  func itemAtIndexPath(indexPath: NSIndexPath) -> LicenseItem {
-    return items[indexPath.section]
+  func itemAtIndexPath(_ indexPath: IndexPath) -> LicenseItem {
+    return items[(indexPath as NSIndexPath).section]
   }
 }
 
