@@ -27,7 +27,7 @@ open class LicensesViewController : UIViewController {
   open override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = NSLocalizedString("Aknowledgements", comment: "Aknowledgements")
+    title = NSLocalizedString("Acknowledgements", comment: "Acknowledgements")
     
     tableView.register(LicenseCell.classForCoder(), forCellReuseIdentifier: reuseIdentifier)
     tableView.rowHeight = UITableViewAutomaticDimension
