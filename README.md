@@ -75,6 +75,13 @@ open LicensesViewControllerExample.xcworkspace
 ####Requirements
 * iOS `8.0`
 
+## Helper with Cocoapods project
+If your projct is Cocoapods project, you can copy `importPodLicenses.sh` to the your project root and run it at the first time to fetch all the Pods 's to the license folder.
+
+```bash
+$ ./importPodLicenses.sh
+```
+
 ##Contact
 Twitter: [@carloeugster](https://twitter.com/carloeugster)
 Email: [carlo@relaun.ch](mailto:carlo@relaun.ch)
