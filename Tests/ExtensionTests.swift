@@ -29,7 +29,6 @@ class PlistTests: XCTestCase {
   
   func testLoadingNonexistentPlists() {
     let dictionary = Bundle(for: type(of: self)).loadPlist("FooPlist")
-    debugPrint(dictionary)
     XCTAssertEqual(dictionary, nil)
   }
   
