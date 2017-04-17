@@ -1,4 +1,4 @@
-#LicenseGenerator iOS
+# LicenseGenerator iOS
 
 [![Build Status](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
 
@@ -10,11 +10,11 @@ The script can help ensure that the license section of your app is always up to 
 
 Inspired by JosephH and Sean's comments on [stackoverflow](http://stackoverflow.com/q/6428353).
 
-##Build Script
+## Build Script
 
 The buiild script resursively searches the project for `LICENSE` files and generates a plist that can be used in a `Settings.bundle`. The script assumes that the parent directory of the `LICENSE` file is also the name of the library to be credited.
 
-####Usage
+#### Usage
 
 * Copy `credits.py` to the your project root
 * Open your project, select your **Target** and select **Build Phases**
@@ -22,13 +22,13 @@ The buiild script resursively searches the project for `LICENSE` files and gener
 * Add something like: `./credits.py -s "$SRCROOT" -o "$SRCROOT/Project/Settings.bundle/Credits.plist"`
 * Build & profit
 
-####Excluding Directories
+#### Excluding Directories
 You can optionally tell the generator to ignore certain paths. To do so use the `-e` option and pass it a comma seperated list of path fragments. 
 
-##View Controller
+## View Controller
 If your app doesn't use a `Settings.bundle` you can use the provided view controller to show the licenses.
 
-####Instalation
+#### Instalation
 
 Add LicensesViewController to your `Podfile`:
 
@@ -48,7 +48,7 @@ $ pod install
 
 Grab `credits.py` from this repo and add it to your project.
 
-####Usage
+#### Usage
 
 Add the build script as described above and make sure the resulting plist is included in the app target.
 
@@ -63,7 +63,7 @@ licensesController.loadPlist(NSBundle.mainBundle(), resourceName: "Credits")
 // ...
 ```
 
-####Example Project
+#### Example Project
 
 ```bash
 git clone https://github.com/carloe/LicenseGenerator-iOS.git
@@ -72,12 +72,12 @@ pod install
 open LicensesViewControllerExample.xcworkspace
 ```
 
-####Requirements
+#### Requirements
 * iOS `8.0`
 
-##Contact
+## Contact
 Twitter: [@carloeugster](https://twitter.com/carloeugster)
 Email: [carlo@relaun.ch](mailto:carlo@relaun.ch)
 
-##License
+## License
 MIT
