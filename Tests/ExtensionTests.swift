@@ -10,7 +10,7 @@ import XCTest
 @testable import LicensesViewController
 
 /**
- This test case tests the NSBundle extentions for loading and parsing plist files
+ This test case tests the NSBundle extensions for loading and parsing plist files
  */
 class PlistTests: XCTestCase {
   

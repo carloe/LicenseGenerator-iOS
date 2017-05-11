@@ -57,7 +57,7 @@ def main(argv):
                   action="extend", type="string",
                   dest='excludes', 
                   metavar='path1, ...', 
-                  help='comma seperated list of paths to be excluded')
+                  help='comma separated list of paths to be excluded')
     if len(sys.argv) == 1:
         parser.parse_args(['--help'])
 

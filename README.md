@@ -23,12 +23,12 @@ The buiild script resursively searches the project for `LICENSE` files and gener
 * Build & profit
 
 ####Excluding Directories
-You can optionally tell the generator to ignore certain paths. To do so use the `-e` option and pass it a comma seperated list of path fragments. 
+You can optionally tell the generator to ignore certain paths. To do so use the `-e` option and pass it a comma separated list of path fragments. 
 
 ##View Controller
 If your app doesn't use a `Settings.bundle` you can use the provided view controller to show the licenses.
 
-####Instalation
+####Installation
 
 Add LicensesViewController to your `Podfile`:
 
