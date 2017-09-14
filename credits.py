@@ -39,6 +39,9 @@ class MultipleOption(Option):
 
 
 def main(argv):
+    def exclude_callback(option, opt, value, parser):
+        setattr(parser.values, option.dest, value.split(','))
+
     parser = OptionParser(option_class=MultipleOption,
                               usage='usage: %prog -s source_path -o output_plist -e [exclude_paths]',
                               version='%s %s' % (PROG, VERSION),
@@ -54,10 +57,11 @@ def main(argv):
                   metavar='output_plist', 
                   help='path to the plist to be generated')
     parser.add_option('-e', '--exclude', 
-                  action="extend", type="string",
+                  action="callback", type="string",
                   dest='excludes', 
                   metavar='path1, ...', 
-                  help='comma seperated list of paths to be excluded')
+                  help='comma seperated list of paths to be excluded',
+                  callback=exclude_callback)
     if len(sys.argv) == 1:
         parser.parse_args(['--help'])
 
@@ -112,7 +116,7 @@ def excludePath(path, excludes):
     if excludes is None:
         return False
     for pattern in excludes:
-        if(re.search(pattern, path, re.S) != None):
+        if(re.search(pattern.strip(), path, re.S) != None):
             return True
     return False
     
