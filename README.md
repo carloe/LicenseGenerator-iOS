@@ -12,7 +12,7 @@ Inspired by JosephH and Sean's comments on [stackoverflow](http://stackoverflow.
 
 ## Build Script
 
-The buiild script resursively searches the project for `LICENSE` files and generates a plist that can be used in a `Settings.bundle`. The script assumes that the parent directory of the `LICENSE` file is also the name of the library to be credited.
+The build script recursively searches the project for `LICENSE` files and generates a plist that can be used in a `Settings.bundle`. The script assumes that the parent directory of the `LICENSE` file is also the name of the library to be credited.
 
 #### Usage
 
@@ -23,7 +23,7 @@ The buiild script resursively searches the project for `LICENSE` files and gener
 * Build & profit
 
 #### Excluding Directories
-You can optionally tell the generator to ignore certain paths. To do so use the `-e` option and pass it a comma separated list of path fragments. 
+You can optionally tell the generator to ignore certain paths. To do so use the `-e` option and pass it a comma separated list of path fragments.
 
 ## View Controller
 If your app doesn't use a `Settings.bundle` you can use the provided view controller to show the licenses.
@@ -37,7 +37,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'LicensesViewController', '~> 0.6.0'
+pod 'LicensesViewController', '~> 0.6.1'
 ```
 
 Then tell Pod to install it:
