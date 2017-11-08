@@ -1,6 +1,7 @@
 # LicenseGenerator iOS
 
 [![Build Status](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
+![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg)
 
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
 
