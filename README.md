@@ -38,7 +38,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'LicensesViewController', '~> 0.6.1'
+pod 'LicensesViewController', '~> 0.6.2'
 ```
 
 Then tell Pod to install it:
@@ -75,6 +75,7 @@ open LicensesViewControllerExample.xcworkspace
 
 #### Requirements
 * iOS `8.0`
+* Swift `4.0`
 
 ## Contact
 Twitter: [@carloeugster](https://twitter.com/carloeugster)
