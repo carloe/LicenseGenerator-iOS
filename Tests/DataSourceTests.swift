@@ -36,7 +36,7 @@ class DataSourceTests: XCTestCase {
    Tests that the `dataSource` only returns 1 row per section.
    */
   func testNumberOfRowsInSection() {
-    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _ in }
+    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _,_  in }
     let rows = dataSource.tableView(UITableView(), numberOfRowsInSection: 0)
     XCTAssertEqual(rows, 1)
   }
@@ -46,7 +46,7 @@ class DataSourceTests: XCTestCase {
    Tests that the `dataSource` contains the correct number of sections.
    */
   func testNumbersOfSectionsInTableView() {
-    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _ in }
+    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _,_  in }
     let sections = dataSource.numberOfSections(in: UITableView())
     XCTAssertEqual(sections, 3)
   }
@@ -87,7 +87,7 @@ class DataSourceTests: XCTestCase {
    Test that `itemAtIndexPath:` returns the correct item.
    */
   func testItemAtIndexPath() {
-    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _ in }
+    let dataSource = LicensesDataSource(reuseIdentifier: "identifier", items: testItems) { _,_  in }
     let firstItem = dataSource.itemAtIndexPath(IndexPath(row: 0, section: 0))
     let secondItem = dataSource.itemAtIndexPath(IndexPath(row: 0, section: 1))
     let thirdItem = dataSource.itemAtIndexPath(IndexPath(row: 0, section: 2))
