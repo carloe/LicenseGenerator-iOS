@@ -1,14 +1,14 @@
 # LicenseGenerator iOS
 
-[![Build](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
+[![Build](https://img.shields.io/travis/carloe/LicenseGenerator-iOS.svg?style=flat)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
 [![Version](https://img.shields.io/cocoapods/v/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
-[![License](https://img.shields.io/cocoapods/l/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
-[![Swift](https://img.shields.io/badge/Swift-4.0.x-orange.svg)](https://swift.org/blog/swift-4-0-released/)
+[![Swift](https://img.shields.io/badge/Swift-4.0.x-orange.svg?style=flat)](https://swift.org/blog/swift-4-0-released/)
 [![Platform](https://img.shields.io/cocoapods/p/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
+[![Downloads](https://img.shields.io/cocoapods/dt/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
 
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
 
-![](screenshot.png)
+![Screenshot](screenshot.png)
 
 The script can help ensure that the license section of your app is always up to date. Since it searches recursively the script works well with cocoapods projects.
 
