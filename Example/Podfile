@@ -1,7 +1,11 @@
-platform :ios, '8.0'
 use_frameworks!
 
-target 'LicensesViewControllerExample' do
+target 'iOS Example' do
+  platform :ios, '8.0'
   pod 'LicensesViewController', :path => '../'
 end
 
+target 'tvOS Example' do
+  platform :tvos, '9.0'
+  pod 'LicensesViewController', :path => '../'
+end
