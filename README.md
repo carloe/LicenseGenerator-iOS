@@ -1,7 +1,10 @@
 # LicenseGenerator iOS
 
-[![Build Status](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
-![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-orange.svg)
+[![Build](https://travis-ci.org/carloe/LicenseGenerator-iOS.svg?branch=master)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
+[![Version](https://img.shields.io/cocoapods/v/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
+[![License](https://img.shields.io/cocoapods/l/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
+[![Swift](https://img.shields.io/badge/Swift-4.0.x-orange.svg)](https://swift.org/blog/swift-4-0-released/)
+[![Platform](https://img.shields.io/cocoapods/p/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
 
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
 
@@ -38,7 +41,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'LicensesViewController', '~> 0.6.2'
+pod 'LicensesViewController', '~> 0.6.3'
 ```
 
 Then tell Pod to install it:

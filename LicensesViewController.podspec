@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LicensesViewController"
-  s.version          = "0.6.2"
+  s.version          = "0.6.3"
   s.summary          = "Give credit where credit is due."
   s.description      = <<-DESC
                         Recursively finds all LICENSE.* files in a given directory and generates that can be displayed via Settings.bundle or the provided view controller.
