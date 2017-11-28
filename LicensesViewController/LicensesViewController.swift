@@ -32,7 +32,7 @@ open class LicensesViewController : UIViewController {
     tableView.register(LicenseCell.classForCoder(), forCellReuseIdentifier: reuseIdentifier)
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 68.0
-    tableView.frame = view.bounds
+    tableView.translatesAutoresizingMaskIntoConstraints = false
     
     view.addSubview(tableView)
   }
