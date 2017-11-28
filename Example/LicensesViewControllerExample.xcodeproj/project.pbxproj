@@ -20,7 +20,6 @@
 		2BF95C661CB1325D00429D0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95C651CB1325D00429D0B /* ViewController.swift */; };
 		46A8AB6B9FD1CF785A33AFC0 /* Pods_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0148D52B6BD5A4B37F578EC9 /* Pods_iOS_Example.framework */; };
 		6AAE3F78BF111CA20FE9A407 /* Pods_tvOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFB1CFCE6CCAE6A13E22BC9 /* Pods_tvOS_Example.framework */; };
-		F469521610C1E8BAF5D87B12 /* Pods_LicensesViewControllerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,7 +54,6 @@
 		B47D0FB9514E3943F721201A /* Pods-iOS Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Example/Pods-iOS Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5191F110E4BEC5AD5F5E98 /* Pods-LicensesViewControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LicensesViewControllerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LicensesViewControllerExample/Pods-LicensesViewControllerExample.release.xcconfig"; sourceTree = "<group>"; };
 		DBFB1CFCE6CCAE6A13E22BC9 /* Pods_tvOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LicensesViewControllerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC6D32D8AEEC122BE7E547C /* Pods-iOS Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Example/Pods-iOS Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F469521610C1E8BAF5D87B12 /* Pods_LicensesViewControllerExample.framework in Frameworks */,
 				46A8AB6B9FD1CF785A33AFC0 /* Pods_iOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +80,6 @@
 		242CDB33F69894DAB0DC971B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF8350C95A27B05A6C77A2B7 /* Pods_LicensesViewControllerExample.framework */,
 				0148D52B6BD5A4B37F578EC9 /* Pods_iOS_Example.framework */,
 				DBFB1CFCE6CCAE6A13E22BC9 /* Pods_tvOS_Example.framework */,
 			);
@@ -552,6 +548,7 @@
 				PRODUCT_NAME = LicensesViewControllerExample;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -569,6 +566,7 @@
 				PRODUCT_NAME = LicensesViewControllerExample;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
