@@ -15,7 +15,19 @@ class ExampleTableViewController: UITableViewController {
             if let destinationVC = segue.destination as? LicensesViewController {
                 destinationVC.loadPlist(Bundle.main, resourceName: "Credits")
             }
+        } else if segue.identifier == "AknowledgementSegueModal" {
+            if let destinationVC = (segue.destination as? UINavigationController)?.topViewController as? LicensesViewController {
+                destinationVC.loadPlist(Bundle.main, resourceName: "Credits")
+                
+                // add cancel button
+                destinationVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+                
+            }
         }
+    }
+    
+    @objc func cancel() {
+        self.presentedViewController?.dismiss(animated: true)
     }
 }
 
