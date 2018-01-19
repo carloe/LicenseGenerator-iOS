@@ -33,6 +33,8 @@ open class LicensesViewController : UIViewController {
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 68.0
     tableView.frame = view.bounds
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = tableView.backgroundColor
     
     view.addSubview(tableView)
   }
@@ -46,13 +48,21 @@ open class LicensesViewController : UIViewController {
           views: ["tableView" : tableView]
         )
       )
-      view.addConstraints(
-        NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableView]|",
-          options: NSLayoutFormatOptions(rawValue: 0),
-          metrics: nil,
-          views: ["tableView" : tableView]
+      if #available(iOS 11, *) {
+        let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+          tableView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+          guide.bottomAnchor.constraintEqualToSystemSpacingBelow(tableView.bottomAnchor, multiplier: 1.0)
+          ])
+      } else {
+        view.addConstraints(
+          NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableView]|",
+                                         options: NSLayoutFormatOptions(rawValue: 0),
+                                         metrics: nil,
+                                         views: ["tableView" : tableView]
+          )
         )
-      )
+      }
       
       didSetupConstraints = true
     }
