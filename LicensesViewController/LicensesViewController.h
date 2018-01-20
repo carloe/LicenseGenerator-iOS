@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double LicensesViewControllerVersionNumber;
 FOUNDATION_EXPORT const unsigned char LicensesViewControllerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LicenseViewController/PublicHeader.h>
-
-

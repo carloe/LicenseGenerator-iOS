@@ -11,12 +11,12 @@ import Foundation
 // MARK: - NSBundle + Plist
 
 extension Bundle {
-  
+
   /**
    Loads a plist file from the bundle and returns it's contents as a NSDictionary
-   
+
    - parameter resourceName: The name of the plist.
-   
+
    - returns: A NSDictionary representation of the plist.
    */
   func loadPlist(_ resourceName: String) -> NSDictionary? {

@@ -11,7 +11,7 @@ import Foundation
 // MARK: - :NSDictionary + CreditItem
 
 extension NSDictionary {
-  
+
   func toLicenseItems() -> Array<LicenseItem> {
     var resultArray = Array<LicenseItem>()
     if let licensesDicts = self["PreferenceSpecifiers"] as? NSArray {
