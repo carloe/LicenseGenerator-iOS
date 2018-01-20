@@ -14,7 +14,7 @@ import UIKit
 open class LicensesViewController : UIViewController {
 
   /// The tableView
-  let tableView = UITableView(frame: CGRect.zero, style: .grouped)
+  open let tableView = UITableView(frame: CGRect.zero, style: .grouped)
 
   /// The tableView's UITableViewDataSource.
   var dataSource: LicensesDataSource!
