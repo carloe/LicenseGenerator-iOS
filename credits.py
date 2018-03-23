@@ -23,8 +23,9 @@ from copy import deepcopy
 
 VERSION = '0.3'
 PROG = os.path.basename(os.path.splitext(__file__)[0])
-DESCRIPTION = """Recursively searches the input directory for 'LICENSE.*' files and compiles them into a Settings.bundle
- friendly plist. Inspired by JosephH and Sean's comments on stackoverflow: http://stackoverflow.com/q/6428353"""
+DESCRIPTION = """Recursively searches the input directory for 'LICENSE.*' 
+files and compiles them into a Settings.bundle friendly plist. Inspired by 
+JosephH and Sean's comments on stackoverflow: http://stackoverflow.com/q/6428353"""
 
 
 class MultipleOption(Option):
