@@ -41,7 +41,7 @@ class MultipleOption(Option):
             Option.take_action(self, action, dest, opt, value, values, parser)
 
 
-def main(argv):
+def main(_):
     def exclude_callback(option, _, value, option_parser):
         setattr(option_parser.values, option.dest, value.split(','))
 
@@ -88,15 +88,23 @@ def plist_from_dir(directory, excludes):
     Recursively search 'dir' to generates plist objects from LICENSE files.
     """
     plist = {'PreferenceSpecifiers': [], 'StringsTable': 'Acknowledgements'}
-    os.chdir(sys.path[0])
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.startswith("LICENSE"):
-                plist_path = os.path.join(root, file)
-                if not exclude_path(plist_path, excludes):
-                    license_dict = plist_from_file(plist_path)
-                    plist['PreferenceSpecifiers'].append(license_dict)
+    license_paths = license_paths_form_dir(directory)
+    plist_paths = (plist_path for plist_path in license_paths if not exclude_path(plist_path, excludes))
+    for plist_path in plist_paths:
+        license_dict = plist_from_file(plist_path)
+        plist['PreferenceSpecifiers'].append(license_dict)
     return plist
+
+
+def license_paths_form_dir(directory):
+    return_dict = []
+    os.chdir(sys.path[0])
+    for dir_path, _, file_names in os.walk(directory):
+        for file_name in file_names:
+            if file_name.startswith("LICENSE"):
+                plist_path = os.path.join(dir_path, file_name)
+                return_dict.append(plist_path)
+    return return_dict
 
 
 def plist_from_file(path):
