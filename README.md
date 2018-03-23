@@ -3,7 +3,7 @@
 [![Build](https://img.shields.io/travis/carloe/LicenseGenerator-iOS.svg?style=flat)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
 [![Version](https://img.shields.io/cocoapods/v/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
 [![Swift](https://img.shields.io/badge/Swift-4.0.x-orange.svg?style=flat)](https://swift.org/blog/swift-4-0-released/)
-[![Platform](https://img.shields.io/cocoapods/p/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e933db1f3161ffea245b/maintainability)](https://codeclimate.com/repos/5ab43fab9859950296000673/maintainability)
 [![Downloads](https://img.shields.io/cocoapods/dt/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
 
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
