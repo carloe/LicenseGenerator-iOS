@@ -100,10 +100,9 @@ def license_paths_form_dir(directory):
     return_dict = []
     os.chdir(sys.path[0])
     for dir_path, _, file_names in os.walk(directory):
+        file_names = (file_name for file_name in file_names if file_name.startswith("LICENSE"))
         for file_name in file_names:
-            if file_name.startswith("LICENSE"):
-                plist_path = os.path.join(dir_path, file_name)
-                return_dict.append(plist_path)
+            return_dict.append(os.path.join(dir_path, file_name))
     return return_dict
 
 
