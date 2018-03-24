@@ -57,7 +57,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5AH-X1-2AM" kind="presentation" identifier="AknowledgementSegueModal" modalPresentationStyle="formSheet" id="C5Y-qy-c2p"/>
+                                            <segue destination="5AH-X1-2AM" kind="presentation" identifier="AknowledgementModalSegue" modalPresentationStyle="formSheet" id="C5Y-qy-c2p"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
