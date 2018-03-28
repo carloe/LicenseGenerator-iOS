@@ -18,13 +18,17 @@ class ExampleTableViewController: UITableViewController {
             }
             destinationVC.loadPlist(Bundle.main, resourceName: "Credits")
         } else if segue.identifier == "AknowledgementModalSegue" {
-            guard let destinationVC = (segue.destination as? UINavigationController)?.topViewController as? LicensesViewController else {
+            let segueVC = segue.destination as? UINavigationController
+            guard let destinationVC = segueVC?.topViewController as? LicensesViewController else {
                 return
             }
             destinationVC.loadPlist(Bundle.main, resourceName: "Credits")
-            destinationVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
-        }
-        else {
+            destinationVC.navigationItem.leftBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .cancel,
+                target: self,
+                action: #selector(cancel)
+            )
+        } else {
             fatalError("Unknown Segue Identifier: \(segue.identifier ?? "<unknown>")")
         }
     }

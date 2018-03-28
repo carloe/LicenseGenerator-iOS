@@ -140,6 +140,7 @@
 				2BB6FC541CB124EB00B45B82 /* Headers */,
 				2BB6FC551CB124EB00B45B82 /* Resources */,
 				2ADBEBFCD5D67296B5DB1598 /* Tailor */,
+				2BF2DB99206C3B1D00C87E79 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -239,7 +240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
-			showEnvVarsInLog = 1;
 		};
 		2B731D4D1CB1272B00B4E648 /* Generate Licenses Plist */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -254,6 +254,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./credits.py -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"";
+		};
+		2BF2DB99206C3B1D00C87E79 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

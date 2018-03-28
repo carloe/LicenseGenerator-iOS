@@ -11,7 +11,7 @@ import UIKit
 // MARK: - LicensesViewController
 
 /// ViewController that displays Settings.bundle style credist.
-open class LicensesViewController : UIViewController {
+open class LicensesViewController: UIViewController {
 
   /// The tableView
   open let tableView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -39,19 +39,19 @@ open class LicensesViewController : UIViewController {
   }
 
   open override func updateViewConstraints() {
-    if(!didSetupConstraints) {
+    if !didSetupConstraints {
       view.addConstraints(
         NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableView]|",
           options: NSLayoutFormatOptions(rawValue: 0),
           metrics: nil,
-          views: ["tableView" : tableView]
+          views: ["tableView": tableView]
         )
       )
       view.addConstraints(
         NSLayoutConstraint.constraints(withVisualFormat: "V:|[tableView]|",
           options: NSLayoutFormatOptions(rawValue: 0),
           metrics: nil,
-          views: ["tableView" : tableView]
+          views: ["tableView": tableView]
         )
       )
 
@@ -85,19 +85,20 @@ open class LicensesViewController : UIViewController {
   /**
    Initializes the tableView's dataSource.
    */
-  func setDataSource(_ licenseItems: Array<LicenseItem>) {
-    dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier, items: licenseItems, configureCell: {
-      (cell: LicenseCell, item: LicenseItem) in
+  func setDataSource(_ licenseItems: [LicenseItem]) {
+    dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier,
+                                              items: licenseItems,
+                                      configureCell: { (cell: LicenseCell, item: LicenseItem) in
       cell.titleLabel.text = item.title
       cell.bodyLabel.text = item.body
-    });
+    })
     tableView.dataSource = dataSource
   }
 }
 
 // MARK: - LicenseCell
 
-class LicenseCell : UITableViewCell {
+class LicenseCell: UITableViewCell {
 
   /// The title label of the cell.
   let titleLabel = UILabel()
@@ -146,11 +147,11 @@ class LicenseCell : UITableViewCell {
   }
 
   override func updateConstraints() {
-    if(!didSetupConstraints) {
+    if !didSetupConstraints {
       let noLayoutOption = NSLayoutFormatOptions(rawValue: 0)
       let views: [String: AnyObject] = [
-        "titleLabel" : titleLabel,
-        "bodyLabel" : bodyLabel
+        "titleLabel": titleLabel,
+        "bodyLabel": bodyLabel
       ]
 
       contentView.addConstraints(
@@ -184,7 +185,7 @@ class LicenseCell : UITableViewCell {
 @objc class LicensesDataSource: NSObject, UITableViewDataSource {
 
   /// A closure for configuring cells.
-  typealias LicenseCellConfigClosure = (_ cell: LicenseCell, _ item: LicenseItem) -> ()
+  typealias LicenseCellConfigClosure = (_ cell: LicenseCell, _ item: LicenseItem) -> Void
 
   /// Closure that is called to configure cells.
   let configureCell: LicenseCellConfigClosure!
@@ -193,7 +194,7 @@ class LicenseCell : UITableViewCell {
   let reuseIdentifier: String!
 
   /// The models represented by the dataSource.
-  let items: Array<LicenseItem>
+  let items: [LicenseItem]
 
   /**
    Initializes a new `dataSource` with items and a configuration closure.
@@ -204,10 +205,10 @@ class LicenseCell : UITableViewCell {
 
    - returns: An initialized `dataSource` object.
    */
-  init(reuseIdentifier: String, items: Array<LicenseItem>, configureCell: @escaping LicenseCellConfigClosure) {
+  init(reuseIdentifier: String, items: [LicenseItem], configureCell: @escaping LicenseCellConfigClosure) {
     self.configureCell = configureCell
     self.reuseIdentifier = reuseIdentifier
-    self.items = items;
+    self.items = items
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {

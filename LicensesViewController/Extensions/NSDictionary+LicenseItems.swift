@@ -12,8 +12,8 @@ import Foundation
 
 extension NSDictionary {
 
-  func toLicenseItems() -> Array<LicenseItem> {
-    var resultArray = Array<LicenseItem>()
+  func toLicenseItems() -> [LicenseItem] {
+    var resultArray = [LicenseItem]()
     guard let licensesDicts = self["PreferenceSpecifiers"] as? NSArray as? [NSDictionary] else {
         return resultArray
     }

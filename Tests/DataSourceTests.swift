@@ -17,7 +17,7 @@ class DataSourceTests: XCTestCase {
   // MARK: - Properties
 
   /// The test credit items
-  var testItems: Array<LicenseItem>!
+  var testItems: [LicenseItem]!
 
   // MARK: - Setup and Teardown
 
@@ -28,7 +28,6 @@ class DataSourceTests: XCTestCase {
       testItems = dict.toLicenseItems()
     }
   }
-
 
   // MARK: - Section & Row Counts
 
@@ -41,7 +40,6 @@ class DataSourceTests: XCTestCase {
     XCTAssertEqual(rows, 1)
   }
 
-
   /**
    Tests that the `dataSource` contains the correct number of sections.
    */
@@ -50,7 +48,6 @@ class DataSourceTests: XCTestCase {
     let sections = dataSource.numberOfSections(in: UITableView())
     XCTAssertEqual(sections, 3)
   }
-
 
   // MARK: - Cell Configuration
 
@@ -65,8 +62,9 @@ class DataSourceTests: XCTestCase {
     var configuredCell: UITableViewCell?
     var configuredItem: LicenseItem?
 
-    let dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier, items: self.testItems, configureCell: {
-      (cell: LicenseCell, item: LicenseItem) in
+    let dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier,
+                                                  items: self.testItems,
+                                          configureCell: { (cell: LicenseCell, item: LicenseItem) in
       configuredCell = cell
       configuredItem = item
     })

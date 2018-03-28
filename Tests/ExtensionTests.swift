@@ -32,7 +32,6 @@ class PlistTests: XCTestCase {
     XCTAssertEqual(dictionary, nil)
   }
 
-
   // MARK: - Transforming plist dicts
 
   /**
@@ -41,7 +40,7 @@ class PlistTests: XCTestCase {
   func testTransformingDictToCreditItems() {
     let dictionary = Bundle(for: type(of: self)).loadPlist("Credits")!
     let items = dictionary.toLicenseItems()
-    XCTAssert((items as Any) is Array<LicenseItem>)
+    XCTAssert((items as Any) is [LicenseItem])
     XCTAssert(items.count == 3)
     XCTAssertEqual(items[0].title, "TestLibFoo1")
     XCTAssertEqual(items[2].title, "TestLibFoo3")
