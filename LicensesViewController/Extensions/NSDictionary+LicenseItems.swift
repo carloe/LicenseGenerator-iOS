@@ -14,11 +14,11 @@ extension NSDictionary {
 
   func toLicenseItems() -> Array<LicenseItem> {
     var resultArray = Array<LicenseItem>()
-    guard let licensesDicts = self["PreferenceSpecifiers"] as? NSArray else {
+    guard let licensesDicts = self["PreferenceSpecifiers"] as? NSArray as? [NSDictionary] else {
         return resultArray
     }
-    
-    for license in (licensesDicts as NSArray as! [NSDictionary]) {
+
+    for license in licensesDicts {
         guard let title = license["Title"] as? String, let body = license["FooterText"] as? String else {
             continue
         }
@@ -26,4 +26,5 @@ extension NSDictionary {
     }
     return resultArray
   }
+
 }
