@@ -10,6 +10,7 @@ import UIKit
 import LicensesViewController
 
 class ExampleTableViewController: UITableViewController {
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AknowledgementSegue" {
             guard let destinationVC = segue.destination as? LicensesViewController else {
@@ -28,13 +29,14 @@ class ExampleTableViewController: UITableViewController {
         }
     }
 
-    
     @objc func cancel() {
         self.presentedViewController?.dismiss(animated: true)
     }
+
 }
 
 class ExampleViewController: UIViewController {
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "AknowledgementSegue" {
       if let destinationVC = segue.destination as? LicensesViewController {
@@ -42,4 +44,5 @@ class ExampleViewController: UIViewController {
       }
     }
   }
+
 }
