@@ -13,28 +13,28 @@ import XCTest
  This test case tests the NSBundle extensions for loading and parsing plist files
  */
 class PlistTests: XCTestCase {
-  
+
   // MARK: - Loading plist dicts
-  
+
   /**
    Test that plists are loaded as dicts.
    */
-  func testDictionaryLoading () {
+  func testDictionaryLoading() {
     let dictionary = Bundle(for: type(of: self)).loadPlist("Credits")
     XCTAssert((dictionary as Any) is NSDictionary)
     XCTAssert(dictionary!.allKeys.count == 2)
     XCTAssertNotNil(dictionary!["StringsTable"])
     XCTAssertNotNil(dictionary!["PreferenceSpecifiers"])
   }
-  
+
   func testLoadingNonexistentPlists() {
     let dictionary = Bundle(for: type(of: self)).loadPlist("FooPlist")
     XCTAssertEqual(dictionary, nil)
   }
-  
-  
+
+
   // MARK: - Transforming plist dicts
-  
+
   /**
    Test that valid NSDictionary structures get transformed into CreditItem arrays.
    */
@@ -46,13 +46,14 @@ class PlistTests: XCTestCase {
     XCTAssertEqual(items[0].title, "TestLibFoo1")
     XCTAssertEqual(items[2].title, "TestLibFoo3")
   }
-  
+
   /**
    Test that unexpected NSDictionary structures return empty CreditItem arrays.
    */
   func testTransformingEmptyDicts() {
-    let dictionary = NSDictionary(dictionary: ["foo" : "fooValue", "bar": "barValue"])
+    let dictionary = NSDictionary(dictionary: ["foo": "fooValue", "bar": "barValue"])
     let items = dictionary.toLicenseItems()
     XCTAssertEqual(items.count, 0)
   }
+
 }
