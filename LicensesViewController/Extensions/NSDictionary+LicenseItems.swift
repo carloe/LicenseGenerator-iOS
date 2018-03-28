@@ -14,14 +14,17 @@ extension NSDictionary {
 
   func toLicenseItems() -> Array<LicenseItem> {
     var resultArray = Array<LicenseItem>()
-    if let licensesDicts = self["PreferenceSpecifiers"] as? NSArray {
-      for license in (licensesDicts as NSArray as! [NSDictionary]) {
-        if let title = license["Title"] as? String, let body = license["FooterText"] as? String {
-          let model = LicenseItem(title: title, body: body)
-          resultArray.append(model)
+    guard let licensesDicts = self["PreferenceSpecifiers"] as? NSArray as? [NSDictionary] else {
+        return resultArray
+    }
+
+    for license in licensesDicts {
+        guard let title = license["Title"] as? String, let body = license["FooterText"] as? String else {
+            continue
         }
-      }
+        resultArray.append(LicenseItem(title: title, body: body))
     }
     return resultArray
   }
+
 }
