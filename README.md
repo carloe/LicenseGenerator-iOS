@@ -23,7 +23,7 @@ The build script recursively searches the project for `LICENSE` files and genera
 * Copy `credits.py` to the your project root
 * Open your project, select your **Target** and select **Build Phases**
 * Add a new **Run Script Phase** after target dependencies
-* Add something like: `./credits.py -s "$SRCROOT" -o "$SRCROOT/Project/Settings.bundle/Credits.plist"`
+* Add something like: `./credits.py -s "$SRCROOT" -o "$SRCROOT/Project/Settings.bundle/Credits.plist" -e "./Carthage/Checkouts/LicenseGenerator-iOS/Example/,./Carthage/Checkouts/LicenseGenerator-iOS/Tests/"`
 * Build & profit
 
 #### Excluding Directories
