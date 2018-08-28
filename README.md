@@ -62,7 +62,7 @@ import LicensesViewController
 // ...
 
 let licensesController = LicensesViewController()
-licensesController.loadPlist(NSBundle.mainBundle(), resourceName: "Credits")
+licensesController.loadPlist(Bundle.main, resourceName: "Credits")
 
 // ...
 ```
