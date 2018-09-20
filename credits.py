@@ -93,6 +93,8 @@ def plist_from_dir(directory, excludes):
     for plist_path in plist_paths:
         license_dict = plist_from_file(plist_path)
         plist['PreferenceSpecifiers'].append(license_dict)
+
+    plist['PreferenceSpecifiers'] = sorted(plist['PreferenceSpecifiers'], key=lambda x: x['Title'])
     return plist
 
 
