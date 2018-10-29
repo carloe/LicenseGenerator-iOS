@@ -3,4 +3,4 @@ osx_image: xcode10
 
 xcode_project: LicensesViewController.xcodeproj
 xcode_scheme: Tests
-xcode_destination: platform=platform=iOS Simulator,name=iPhone 7,OS=12.0
+xcode_destination: platform=iOS Simulator,name=iPhone 7,OS=12.0
