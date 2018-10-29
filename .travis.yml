@@ -2,5 +2,5 @@ language: objective-c
 osx_image: xcode10
 
 xcode_project: LicensesViewController.xcodeproj
-xcode_scheme: Tests
+xcode_scheme: LicensesViewController
 xcode_destination: platform=iOS Simulator,name=iPhone 7,OS=12.0
