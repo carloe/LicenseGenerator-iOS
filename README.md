@@ -2,7 +2,7 @@
 
 [![Build](https://img.shields.io/travis/carloe/LicenseGenerator-iOS.svg?style=flat)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
 [![Version](https://img.shields.io/cocoapods/v/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
-[![Swift](https://img.shields.io/badge/Swift-4.0.x-orange.svg?style=flat)](https://swift.org/blog/swift-4-0-released/)
+[![Swift](https://img.shields.io/badge/Swift-4.2.x-orange.svg?style=flat)](https://swift.org/blog/swift-4-2-released/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/eefaf4d31b8469ec893d/maintainability)](https://codeclimate.com/github/carloe/LicenseGenerator-iOS/maintainability)
 [![Downloads](https://img.shields.io/cocoapods/dt/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
 
