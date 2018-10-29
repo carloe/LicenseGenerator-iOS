@@ -2,12 +2,5 @@ language: objective-c
 osx_image: xcode10
 
 xcode_project: LicensesViewController.xcodeproj
-xcode_scheme: LicensesViewController
-
-before_install:
-  - gem install xcpretty -N --no-ri --no-rdoc
-
-script:
-- rvm get head
-- set -o pipefail
-- xcodebuild clean build test -project LicensesViewController.xcodeproj -scheme LicensesViewController -destination 'platform=iOS Simulator,name=iPhone 7,OS=12.0' | xcpretty
+xcode_scheme: Tests
+xcode_destination: platform=platform=iOS Simulator,name=iPhone 7,OS=12.0
