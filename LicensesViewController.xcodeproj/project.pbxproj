@@ -135,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BB6FC6B1CB124EB00B45B82 /* Build configuration list for PBXNativeTarget "LicensesViewController" */;
 			buildPhases = (
+				2BECE0F6218726BF00459C0B /* Generate Licenses Plist */,
 				2BB6FC521CB124EB00B45B82 /* Sources */,
 				2BB6FC531CB124EB00B45B82 /* Frameworks */,
 				2BB6FC541CB124EB00B45B82 /* Headers */,
@@ -253,7 +254,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./credits.py -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"";
+			shellScript = "./credits.py -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"\n";
+		};
+		2BECE0F6218726BF00459C0B /* Generate Licenses Plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Licenses Plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./credits.py -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"\n";
 		};
 		2BF2DB99206C3B1D00C87E79 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
