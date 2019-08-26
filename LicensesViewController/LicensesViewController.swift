@@ -19,6 +19,10 @@ open class LicensesViewController: UIViewController {
   /// The tableView's UITableViewDataSource.
   var dataSource: LicensesDataSource!
 
+  open var textColor = UIColor.black
+  open var bodyColor = UIColor.darkGray
+  open var cellBackgroundColor: UIColor?
+
   /// Boolean tracking if the constrains have been setup.
   fileprivate var didSetupConstraints = false
 
@@ -86,11 +90,19 @@ open class LicensesViewController: UIViewController {
    Initializes the tableView's dataSource.
    */
   func setDataSource(_ licenseItems: [LicenseItem]) {
+    let customTextColor = textColor
+    let customBodyColor = bodyColor
+    let customCellBackgroundColor = cellBackgroundColor
     dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier,
                                               items: licenseItems,
                                       configureCell: { (cell: LicenseCell, item: LicenseItem) in
       cell.titleLabel.text = item.title
       cell.bodyLabel.text = item.body
+      cell.titleLabel.textColor = customTextColor
+      cell.bodyLabel.textColor = customBodyColor
+      if let customBackgroundColor = customCellBackgroundColor {
+        cell.backgroundColor = customBackgroundColor
+      }
     })
     tableView.dataSource = dataSource
   }
