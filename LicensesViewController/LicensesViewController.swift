@@ -124,14 +124,22 @@ class LicenseCell: UITableViewCell {
 
     selectionStyle = .none
 
-    titleLabel.textColor = UIColor.black
+    if #available(iOS 13.0, *) {
+        titleLabel.textColor = UIColor.label
+    } else {
+        titleLabel.textColor = UIColor.black
+    }
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
     titleLabel.lineBreakMode = .byTruncatingTail
     titleLabel.numberOfLines = 1
     contentView.addSubview(titleLabel)
 
-    bodyLabel.textColor = UIColor.darkGray
+    if #available(iOS 13.0, *) {
+        bodyLabel.textColor = UIColor.secondaryLabel
+    } else {
+        bodyLabel.textColor = UIColor.darkGray
+    }
     bodyLabel.translatesAutoresizingMaskIntoConstraints = false
     bodyLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
     bodyLabel.lineBreakMode = .byWordWrapping
