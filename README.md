@@ -40,7 +40,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'LicensesViewController', '~> 0.7.0'
+pod 'LicensesViewController', '~> 0.8.0'
 ```
 
 Then tell Pod to install it:
