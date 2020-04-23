@@ -124,7 +124,7 @@ class LicenseCell: UITableViewCell {
 
     selectionStyle = .none
 
-    if #available(iOS 13.0, *) {
+    if #available(iOS 13.0, tvOS 13.0, *) {
         titleLabel.textColor = UIColor.label
     } else {
         titleLabel.textColor = UIColor.black
@@ -135,7 +135,7 @@ class LicenseCell: UITableViewCell {
     titleLabel.numberOfLines = 1
     contentView.addSubview(titleLabel)
 
-    if #available(iOS 13.0, *) {
+    if #available(iOS 13.0, tvOS 13.0, *) {
         bodyLabel.textColor = UIColor.secondaryLabel
     } else {
         bodyLabel.textColor = UIColor.darkGray
