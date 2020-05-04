@@ -65,6 +65,12 @@ def main(_):
                       metavar='path1, ...',
                       help='comma separated list of paths to be excluded',
                       callback=exclude_callback)
+    parser.add_option('-t', '--test',
+                      action="store_true",
+                      dest='include_tests',
+                      metavar='include_tests',
+                      default=False,
+                      help='include files in the `Tests` directory for unit testing')
     if len(sys.argv) == 1:
         parser.parse_args(['--help'])
 
@@ -78,18 +84,18 @@ def main(_):
         print("Error: Outputfile must end in .plist")
         sys.exit(2)
 
-    plist = plist_from_dir(options.input_path, options.excludes)
+    plist = plist_from_dir(options.input_path, options.excludes, options.include_tests)
     plistlib.writePlist(plist, options.output_file)
     return 0
 
 
-def plist_from_dir(directory, excludes):
+def plist_from_dir(directory, excludes, include_tests):
     """
     Recursively search 'dir' to generates plist objects from LICENSE files.
     """
     plist = {'PreferenceSpecifiers': [], 'StringsTable': 'Acknowledgements'}
     license_paths = license_paths_form_dir(directory)
-    plist_paths = (plist_path for plist_path in license_paths if not exclude_path(plist_path, excludes))
+    plist_paths = (plist_path for plist_path in license_paths if not exclude_path(plist_path, excludes, include_tests))
     for plist_path in plist_paths:
         license_dict = plist_from_file(plist_path)
         plist['PreferenceSpecifiers'].append(license_dict)
@@ -127,10 +133,10 @@ def plist_from_file(path):
     return group
 
 
-def exclude_path(path, excludes):
+def exclude_path(path, excludes, is_testing):
     if "/LicenseGenerator-iOS/Example/" in path:
         return True
-    if "/LicenseGenerator-iOS/Tests/" in path:
+    if is_testing is False and "/LicenseGenerator-iOS/Tests/" in path:
         return True
     if excludes is None:
         return False
