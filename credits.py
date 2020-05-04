@@ -21,7 +21,7 @@ from optparse import OptionParser
 from optparse import Option, OptionValueError
 from copy import deepcopy
 
-VERSION = '0.3'
+VERSION = '0.4.0'
 PROG = os.path.basename(os.path.splitext(__file__)[0])
 DESCRIPTION = """Generate a `Settings.bundle` friendly plist file from all
  'LICENSE.*' files in a given directory. Inspired by JosephH and Sean's
@@ -128,6 +128,10 @@ def plist_from_file(path):
 
 
 def exclude_path(path, excludes):
+    if "/LicenseGenerator-iOS/Example/" in path:
+        return True
+    if "/LicenseGenerator-iOS/Tests/" in path:
+        return True
     if excludes is None:
         return False
     for pattern in excludes:
