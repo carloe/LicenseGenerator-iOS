@@ -140,7 +140,6 @@
 				2BB6FC531CB124EB00B45B82 /* Frameworks */,
 				2BB6FC541CB124EB00B45B82 /* Headers */,
 				2BB6FC551CB124EB00B45B82 /* Resources */,
-				2ADBEBFCD5D67296B5DB1598 /* Tailor */,
 				2BF2DB99206C3B1D00C87E79 /* SwiftLint */,
 			);
 			buildRules = (
@@ -229,20 +228,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2ADBEBFCD5D67296B5DB1598 /* Tailor */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Tailor;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
-		};
 		2B731D4D1CB1272B00B4E648 /* Generate Licenses Plist */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,7 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
