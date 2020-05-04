@@ -84,7 +84,11 @@ def main(_):
         print("Error: Outputfile must end in .plist")
         sys.exit(2)
 
-    plist = plist_from_dir(options.input_path, options.excludes, options.include_tests)
+    plist = plist_from_dir(
+        options.input_path,
+        options.excludes,
+        options.include_tests
+    )
     plistlib.writePlist(plist, options.output_file)
     return 0
 
@@ -136,10 +140,11 @@ def plist_from_file(path):
 def exclude_path(path, excludes, is_testing):
     if "/LicenseGenerator-iOS/Example/" in path:
         return True
-    if is_testing is False and "/LicenseGenerator-iOS/Tests/" in path:
-        return True
-    if excludes is None:
+    elif "/LicenseGenerator-iOS/Tests/" in path:
+        return not is_testing
+    elif excludes is None:
         return False
+
     for pattern in excludes:
         if re.search(pattern.strip(), path, re.S) is not None:
             return True
