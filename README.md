@@ -2,7 +2,7 @@
 
 [![Build](https://img.shields.io/travis/carloe/LicenseGenerator-iOS.svg?style=flat)](https://travis-ci.org/carloe/LicenseGenerator-iOS)
 [![Version](https://img.shields.io/cocoapods/v/LicensesViewController.svg?style=flat)](http://cocoapods.org/pods/LicensesViewController)
-[![Swift](https://img.shields.io/badge/Swift-4.2.x-orange.svg?style=flat)](https://swift.org/blog/swift-4-2-released/)
+[![Swift](https://img.shields.io/badge/Swift-5.x-orange.svg?style=flat)](https://swift.org/blog/swift-5-released/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/eefaf4d31b8469ec893d/maintainability)](https://codeclimate.com/github/carloe/LicenseGenerator-iOS/maintainability)
 
 Recursively finds all `LICENSE.*` files in a directory and generates a plist that can be displayed in `Settings.bundle` or the provided view controller.
@@ -78,7 +78,7 @@ open LicensesViewControllerExample.xcworkspace
 #### Requirements
 * iOS `8.0`
 * tvOS `9.0`
-* Swift `4.2`
+* Swift `4.2`, '5.0', '5.1', '5.2'
 
 If you are targeting Swift `4.0` use `'~> 0.6.6'` in your Podfile.
 

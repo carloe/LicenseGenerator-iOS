@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
-  s.swift_versions = ['4.2']
+  s.swift_versions = ['4.2', '5.0', '5.1', '5.2']
   s.requires_arc = true
 
   s.source_files = 'LicensesViewController/**/*.swift'
