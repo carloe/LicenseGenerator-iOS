@@ -240,7 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./credits.py -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"\n";
+			shellScript = "./credits.py --test -s \"$SRCROOT/Tests/Resources\" -o \"$SRCROOT/Tests/Resources/Credits.plist\"\n";
 		};
 		2BECE0F6218726BF00459C0B /* Generate Licenses Plist */ = {
 			isa = PBXShellScriptBuildPhase;

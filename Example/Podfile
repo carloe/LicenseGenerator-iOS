@@ -3,9 +3,13 @@ use_frameworks!
 target 'iOS Example' do
   platform :ios, '8.0'
   pod 'LicensesViewController', :path => '../'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.0'
 end
 
 target 'tvOS Example' do
   platform :tvos, '9.0'
   pod 'LicensesViewController', :path => '../'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.0'
 end
