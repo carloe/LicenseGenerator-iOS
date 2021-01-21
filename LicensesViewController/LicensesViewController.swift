@@ -23,6 +23,18 @@ open class LicensesViewController: UIViewController {
   fileprivate var didSetupConstraints = false
 
   fileprivate let reuseIdentifier = "LicenseCell"
+    
+    public var configuration: LicensesViewControllerConfiguration? {
+        didSet {
+            if let tableViewBackgroundColor = configuration?.tableViewBackgroundColor {
+                tableView.backgroundColor = tableViewBackgroundColor
+            }
+            if let tableViewSeparatorColor = configuration?.tableViewSeparatorColor {
+                tableView.separatorColor = tableViewSeparatorColor
+            }
+            tableView.reloadData()
+        }
+    }
 
   open override func viewDidLoad() {
     super.viewDidLoad()
@@ -89,8 +101,26 @@ open class LicensesViewController: UIViewController {
     dataSource = LicensesDataSource(reuseIdentifier: reuseIdentifier,
                                               items: licenseItems,
                                       configureCell: { (cell: LicenseCell, item: LicenseItem) in
+      
+      if let cellBackgroundColor = self.configuration?.cellBackgroundColor {
+        cell.contentView.backgroundColor = cellBackgroundColor
+      }
+                                        
       cell.titleLabel.text = item.title
+      if let cellTitleFont = self.configuration?.cellTitleFont {
+        cell.titleLabel.font = cellTitleFont
+      }
+      if let cellTitleFontColor = self.configuration?.cellTitleFontColor {
+        cell.titleLabel.textColor = cellTitleFontColor
+      }
+      
       cell.bodyLabel.text = item.body
+      if let cellBodyFont = self.configuration?.cellBodyFont {
+        cell.bodyLabel.font = cellBodyFont
+      }
+      if let cellBodyFontColor = self.configuration?.cellBodyFontColor {
+        cell.bodyLabel.textColor = cellBodyFontColor
+      }
     })
     tableView.dataSource = dataSource
   }
@@ -124,22 +154,14 @@ class LicenseCell: UITableViewCell {
 
     selectionStyle = .none
 
-    if #available(iOS 13.0, tvOS 13.0, *) {
-        titleLabel.textColor = UIColor.label
-    } else {
-        titleLabel.textColor = UIColor.black
-    }
+    titleLabel.textColor = UIColor.black
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
     titleLabel.lineBreakMode = .byTruncatingTail
     titleLabel.numberOfLines = 1
     contentView.addSubview(titleLabel)
 
-    if #available(iOS 13.0, tvOS 13.0, *) {
-        bodyLabel.textColor = UIColor.secondaryLabel
-    } else {
-        bodyLabel.textColor = UIColor.darkGray
-    }
+    bodyLabel.textColor = UIColor.darkGray
     bodyLabel.translatesAutoresizingMaskIntoConstraints = false
     bodyLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
     bodyLabel.lineBreakMode = .byWordWrapping
@@ -255,4 +277,31 @@ class LicenseCell: UITableViewCell {
 struct LicenseItem {
   var title: String?
   var body: String?
+}
+
+/**
+ Information struct, to configure the LicensesViewController to the project needs.
+ */
+public struct LicensesViewControllerConfiguration {
+    /// The background color for the UITableView.
+    public var tableViewBackgroundColor: UIColor?
+    /// The separator color for the UITableView.
+    public var tableViewSeparatorColor: UIColor?
+    
+    /// The background color for the UITableViewCell.
+    public var cellBackgroundColor: UIColor?
+    
+    /// The font color for the title label.
+    public var cellTitleFontColor: UIColor?
+    /// The font for the title label.
+    public var cellTitleFont: UIFont?
+    
+    /// The font color for the body label.
+    public var cellBodyFontColor: UIColor?
+    /// The font for the body label.
+    public var cellBodyFont: UIFont?
+    
+    public init() {
+        // Empty
+    }
 }
