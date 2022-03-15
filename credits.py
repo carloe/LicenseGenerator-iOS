@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # coding: utf-8
 
 """
@@ -79,10 +79,9 @@ def main(_):
 
     options, args = parser.parse_args()
 
-    print options.input_path
     for path in options.input_path:
         if(not os.path.isdir(path)):
-            print "Error: Source path does not exist: %s" % path
+            print("Error: Source path does not exist: %s" % path)
             sys.exit(2)
 
     if not options.output_file.endswith('.plist'):
@@ -94,7 +93,9 @@ def main(_):
         options.excludes,
         options.include_tests
     )
-    plistlib.writePlist(plist, options.output_file)
+
+    with open(options.output_file, 'wb') as f:
+        plistlib.dump(plist, f)
     return 0
 
 
@@ -134,12 +135,12 @@ def plist_from_file(path):
     current_file = open(path, 'r')
     group = deepcopy(base_group)
     title = path.split("/")[-2]
-    group['Title'] = unicode(title, 'utf-8')
+    group['Title'] = title
     src_body = current_file.read()
     body = ""
     for match in re.finditer(r'(?s)((?:[^\n][\n]?)+)', src_body):
         body = body + re.sub("(\\n)", " ", match.group()) + "\n\n"
-    body = unicode(body, 'utf-8')
+    body = body
     group['FooterText'] = rchop(body, " \n\n")
     return group
 
