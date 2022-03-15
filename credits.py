@@ -107,7 +107,7 @@ def plist_from_dirs(directories, excludes, include_tests):
     plist = {'PreferenceSpecifiers': [], 'StringsTable': 'Acknowledgements'}
     for directory in directories:
         license_paths = license_paths_from_dir(directory)
-        plist_paths = [plist_path for plist_path in license_paths if not exclude_path(plist_path, excludes, include_tests)]
+        plist_paths = [plist_path for plist_path in license_paths if not exclude_path(directory, plist_path, excludes, include_tests)]
         for plist_path in plist_paths:
             license_dict = plist_from_file(plist_path)
             plist['PreferenceSpecifiers'].append(license_dict)
@@ -145,16 +145,16 @@ def plist_from_file(path):
     return group
 
 
-def exclude_path(path, excludes, is_testing):
-    if "/LicenseGenerator-iOS/Example/" in path:
+def exclude_path(source_path, plist_path, excludes, is_testing):
+    if "/LicenseGenerator-iOS/Example/" in plist_path and '/LicenseGenerator-iOS/Example/Pods' not in source_path:
         return True
-    elif "/LicenseGenerator-iOS/Tests/" in path:
+    elif "/LicenseGenerator-iOS/Tests/" in plist_path:
         return not is_testing
     elif excludes is None:
         return False
 
     for pattern in excludes:
-        if re.search(pattern.strip(), path, re.S) is not None:
+        if re.search(pattern.strip(), plist_path, re.S) is not None:
             return True
     return False
 
