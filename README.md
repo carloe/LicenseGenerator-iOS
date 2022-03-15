@@ -80,6 +80,8 @@ open LicensesViewControllerExample.xcworkspace
 * tvOS `9.0`
 * Swift `4.2`, `5.0`, `5.1`, `5.2`
 
+If you depend on Python `2.x` use `'~> 0.9.0'` in your Podfile. 
+
 If you are targeting Swift `4.0` use `'~> 0.6.6'` in your Podfile.
 
 ## Contact
