@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # coding: utf-8
 
 """
@@ -21,7 +21,7 @@ from optparse import OptionParser
 from optparse import Option, OptionValueError
 from copy import deepcopy
 
-VERSION = '0.5.0'
+VERSION = '0.11.0'
 PROG = os.path.basename(os.path.splitext(__file__)[0])
 DESCRIPTION = """Generate a `Settings.bundle` friendly plist file from all
  'LICENSE.*' files in a given directory. Inspired by JosephH and Sean's
